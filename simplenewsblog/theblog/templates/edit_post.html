@@ -1,8 +1,9 @@
 {% extends 'base.html' %} 
-{% block title %}Edit Blog Post{% endblock  %}
+{% block title %}Изменить запись{% endblock  %}
 {% block content %}
 
-<h1>Edit Blog Post</h1>
+{% if user.is_authenticated %}
+<h1>Изменить запись в блоге</h1>
 <br />
 <br />
 <form method="post">
@@ -10,5 +11,6 @@
   {{form.as_p}}
   <button class="btn btn-secondary">Изменить</button>
 </form>
+{% endif %}
 
 {% endblock %}
