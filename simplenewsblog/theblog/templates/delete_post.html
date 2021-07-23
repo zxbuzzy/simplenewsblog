@@ -3,10 +3,10 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<h1>Delete Post</h1>
+<h1>Удалить запись</h1>
 <br />
 <br />
-<h3>Delete: {{ post.title }}</h3>
+<h3>Удалить: {{ post.title }}</h3>
 <form method="post">
   {% csrf_token %}
   <button class="btn btn-secondary">Удалить</button>
