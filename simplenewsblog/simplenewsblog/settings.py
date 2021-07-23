@@ -32,7 +32,7 @@ DEBUG = True
 
 #Enviroment variables
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://pacific-wildwood-53815.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
