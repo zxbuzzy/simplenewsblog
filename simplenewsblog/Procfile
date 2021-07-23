@@ -1,1 +1,2 @@
 web: gunicorn simplenewsblog.wsgi
+heroku ps:scale web=1
