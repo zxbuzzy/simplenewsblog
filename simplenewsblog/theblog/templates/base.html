@@ -65,6 +65,9 @@
         </li>
         {% endif %}       
       </ul>
+      {% if user.is_authenticated %}
+        <img src="{{ user.profile.profile_picture.url }}" alt="profile_picture" class="d-flex rounded-circle" height=60 width=60>
+      {% endif %}
     </div>
   </div>
 </nav>
