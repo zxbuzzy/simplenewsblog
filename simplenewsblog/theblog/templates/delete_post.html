@@ -3,14 +3,15 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-<h1>Удалить запись</h1>
-<br />
-<br />
-<h3>Удалить: {{ post.title }}</h3>
-<form method="post">
-  {% csrf_token %}
-  <button class="btn btn-secondary">Удалить</button>
-</form>
+    {% if user.id == post.author.id %}
+      <h1>Удалить запись</h1>
+      <br />
+      <br />
+      <h3>Удалить: {{ post.title }}</h3>
+      <form method="post">
+        {% csrf_token %}
+        <button class="btn btn-secondary">Удалить</button>
+      </form>
+    {% endif %}
 {% endif %}
-
 {% endblock %}
